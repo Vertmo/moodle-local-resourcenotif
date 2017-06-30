@@ -10,8 +10,11 @@ define(['jquery', 'jqueryui'], function($) {
 			if (activities) {
 				for (var i = 0; i < activities.length; i++) {
 					var ul = activities[i];
-					//console.log(ul);
-					ul.innerHTML += html.replace('123XYZ321', 'test');
+					var owner = ul.parentNode.parentNode.parentNode.getAttribute('data-owner');
+					if(owner) {
+						var id = owner.replace(/^#module-/, '');
+						ul.innerHTML += html.replace('123XYZ321', id);
+					}
 				}
 			}
 		}
