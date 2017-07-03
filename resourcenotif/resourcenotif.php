@@ -6,7 +6,7 @@
  */
 
 require_once("../../config.php");
-require_once('lib_resourcenotif.php');
+require_once('locallib.php');
 require_once('resourcenotif_form.php');
 
 $id = required_param('id', PARAM_INT);

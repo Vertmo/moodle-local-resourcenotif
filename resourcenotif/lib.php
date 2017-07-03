@@ -5,7 +5,7 @@
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
-function local_resourcenotif_extend_navigation_course() {
+function local_resourcenotif_extend_navigation_course($settingsnav, $context) {
     global $OUTPUT, $PAGE;
     $html = "<a class='dropdown-item editing_notifications menu-action cm-edit-action' data-action='notifications' role='menuitem'"
         . "href='" . htmlspecialchars(new moodle_url('/local/resourcenotif/resourcenotif.php', array('id' => '123XYZ321')))."' "
